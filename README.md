@@ -136,3 +136,22 @@ The application uses SQLite by default. The database file (`events.db`) will be 
 
 **Note**: The first user registered automatically becomes an admin for demo purposes.
 
+## Docker
+pip freeze > requirements.txt
+docker images
+# Rebuild the image
+docker build -t events-api .
+docker build --no-cache -t events-api .
+# Remove the old failed container
+docker rm events-api-container
+# Run the new one
+docker run -d -p 5000:5000 --name events-api-container events-api
+curl http://localhost:5000/health
+
+docker ps
+# stop container
+docker stop events-api-container
+# restart container
+docker start events-api-container
+# remove container
+docker rm -f events-api-container

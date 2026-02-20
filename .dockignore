@@ -1,0 +1,33 @@
+# Git metadata
+.git
+.gitignore
+
+# Python virtual environments
+venv/
+.venv/
+env/
+
+# Python bytecode and caches
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.pytest_cache/
+.ipynb_checkpoints/
+
+# Local databases (don't bake your local data into the image!)
+*.db
+*.sqlite3
+instance/
+
+# OS-specific files
+.DS_Store
+Thumbs.db
+
+# Environment variables (prevents leaking secrets)
+*.env
+
+# Non-runtime documentation or notes
+docs/
+notes/
+*.md
