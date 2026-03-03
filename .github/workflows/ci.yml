@@ -30,7 +30,7 @@ jobs:
         run: |
           echo "Waiting for API to start..."
           sleep 5
-          curl --fail http://localhost:5000/health || exit 1
+          curl --fail http://localhost:5000/api/health || exit 1
           echo "API is healthy!"
 
       - name: Stop container
