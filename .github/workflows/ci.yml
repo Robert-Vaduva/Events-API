@@ -1,0 +1,22 @@
+name: CI  # Numele care va apărea în GitHub Actions
+
+# Declanșăm workflow-ul la push sau PR pe ramura main
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+
+jobs:
+  test:
+    name: Run Unit Tests
+    runs-on: ubuntu-latest  # Mașina virtuală pe care rulează procesul
+
+    steps:
+      # Pasul 1: Descarcă codul din repository pe mașina virtuală
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      # Pasul 2: (Opțional, dar recomandat) Confirmă prezența fișierelor
+      - name: List files
+        run: ls -R
