@@ -52,7 +52,7 @@ def create_app():
     @app.route('/', methods=['GET'])
     def root():
         return jsonify({
-            'name': 'Evently API',
+            'name': 'Evently API APP',
             'version': '1.0.0',
             'description': 'A Flask-based REST API for managing events and RSVPs with different access levels',
             'documentation': {
@@ -80,7 +80,7 @@ def create_app():
     # Health check endpoint
     @app.route('/api/health', methods=['GET'])
     def health():
-        return jsonify({'status': 'healthy as an APP can be :)'}), 200
+        return jsonify({'status': 'healthy'}), 200
 
     return app
 
